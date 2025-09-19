@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+center {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+label {
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+center > br:last-of-type {
+    display: none;
+}
+
+center > a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 25px;
+    border: 2px solid #667eea;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+center > a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Animación para los elementos del formulario */
+center > * {
+    animation: slideUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+center > *:nth-child(1) { animation-delay: 0.1s; }
+center > *:nth-child(2) { animation-delay: 0.2s; }
+center > *:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    center {
+        padding: 25px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}
